@@ -126,7 +126,17 @@ function App() {
           <div className="container-lg fade-in-up">
             <div className="p-4">
               <p className="mb-0">
-                Welcome to Wawa Mart, your friendly neighborhood convenience store where quality meets convenience...
+                Welcome to Wawa Mart, your friendly neighborhood convenience
+                store where quality meets convenience. Since opening our doors,
+                we’ve been committed to providing a wide range of everyday
+                essentials—from snacks and beverages to household items and
+                on-the-go meals—all in one easy, accessible place. At Wawa Mart,
+                we pride ourselves on creating a clean, welcoming environment
+                where customer service comes first. Whether you’re grabbing a
+                quick Drink, stocking up on groceries, or just stopping by for a
+                friendly chat, our team is here to make your experience smooth
+                and satisfying. We’re more than just a store—we’re part of your
+                community. Thank you for choosing Wawa Mart!
               </p>
             </div>
           </div>
@@ -153,7 +163,9 @@ function App() {
             >
               {/* Name */}
               <div className="mb-3">
-                <label htmlFor="name" className="form-label">Name</label>
+                <label htmlFor="name" className="form-label">
+                  Name
+                </label>
                 <input
                   type="text"
                   className={`form-control ${errors.name ? "is-invalid" : ""}`}
@@ -163,27 +175,37 @@ function App() {
                   onChange={handleChange}
                   placeholder="Enter your name"
                 />
-                {errors.name && <div className="invalid-feedback">{errors.name}</div>}
+                {errors.name && (
+                  <div className="invalid-feedback">{errors.name}</div>
+                )}
               </div>
 
               {/* Mobile */}
               <div className="mb-3">
-                <label htmlFor="mobile" className="form-label">Mobile</label>
+                <label htmlFor="mobile" className="form-label">
+                  Mobile
+                </label>
                 <input
                   type="tel"
-                  className={`form-control ${errors.mobile ? "is-invalid" : ""}`}
+                  className={`form-control ${
+                    errors.mobile ? "is-invalid" : ""
+                  }`}
                   id="mobile"
                   name="mobile"
                   value={formData.mobile}
                   onChange={handleChange}
                   placeholder="Enter your mobile number"
                 />
-                {errors.mobile && <div className="invalid-feedback">{errors.mobile}</div>}
+                {errors.mobile && (
+                  <div className="invalid-feedback">{errors.mobile}</div>
+                )}
               </div>
 
               {/* Email */}
               <div className="mb-3">
-                <label htmlFor="email" className="form-label">Email</label>
+                <label htmlFor="email" className="form-label">
+                  Email
+                </label>
                 <input
                   type="email"
                   className={`form-control ${errors.email ? "is-invalid" : ""}`}
@@ -193,14 +215,20 @@ function App() {
                   onChange={handleChange}
                   placeholder="Enter your email"
                 />
-                {errors.email && <div className="invalid-feedback">{errors.email}</div>}
+                {errors.email && (
+                  <div className="invalid-feedback">{errors.email}</div>
+                )}
               </div>
 
               {/* Product Suggestion */}
               <div className="mb-3">
-                <label htmlFor="product" className="form-label">Product Suggestion</label>
+                <label htmlFor="product" className="form-label">
+                  Product Suggestion
+                </label>
                 <textarea
-                  className={`form-control ${errors.product ? "is-invalid" : ""}`}
+                  className={`form-control ${
+                    errors.product ? "is-invalid" : ""
+                  }`}
                   id="product"
                   name="product"
                   rows="3"
@@ -208,7 +236,9 @@ function App() {
                   onChange={handleChange}
                   placeholder="Write your product request or comment here"
                 ></textarea>
-                {errors.product && <div className="invalid-feedback">{errors.product}</div>}
+                {errors.product && (
+                  <div className="invalid-feedback">{errors.product}</div>
+                )}
               </div>
 
               {/* Submit Button */}
@@ -233,18 +263,36 @@ function App() {
 
       {/* Modal */}
       {showModal && (
-        <div className="modal fade show d-block" tabIndex="-1" role="dialog" style={{ backgroundColor: "rgba(0,0,0,0.5)" }}>
+        <div
+          className="modal fade show d-block"
+          tabIndex="-1"
+          role="dialog"
+          style={{ backgroundColor: "rgba(0,0,0,0.5)" }}
+        >
           <div className="modal-dialog modal-dialog-centered" role="document">
             <div className="modal-content">
               <div className="modal-header">
                 <h5 className="modal-title">Thank You!</h5>
-                <button type="button" className="btn-close" onClick={handleClose}></button>
+                <button
+                  type="button"
+                  className="btn-close"
+                  onClick={handleClose}
+                ></button>
               </div>
               <div className="modal-body">
-                <p>Your message has been submitted successfully. We appreciate your feedback!</p>
+                <p>
+                  Your message has been submitted successfully. We appreciate
+                  your feedback!
+                </p>
               </div>
               <div className="modal-footer">
-                <button type="button" className="btn btn-secondary" onClick={handleClose}>Close</button>
+                <button
+                  type="button"
+                  className="btn btn-secondary"
+                  onClick={handleClose}
+                >
+                  Close
+                </button>
               </div>
             </div>
           </div>
