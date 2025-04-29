@@ -22,35 +22,39 @@ function App() {
         {/* Main Content */}
         <main className="flex-fill">
           {/* Top Image Section */}
-          <div className="container-lg pt-4 text-center position-relative">
+          <div className="container-lg pt-4 text-center position-relative fade-in-up">
             <img
               src="/pexels-sanaan-3116970.jpg"
               alt="Wawa Mart Store"
-              className="img-fluid rounded mb-4 w-100"
+              className="img-fluid rounded mb-4 w-100 zoom-in"
               style={{ maxHeight: "400px", objectFit: "cover" }}
             />
-            <h1 className="fw-bold position-absolute top-50 start-50 translate-middle text-white text-center responsive-heading">
+            <h1 className="fw-bold w-100 position-absolute top-50 start-50 translate-middle text-white text-center responsive-heading">
               Welcome to Wawa Mart – Convenience Store
             </h1>
           </div>
 
           {/* Styled Text Content */}
-          <div className="container-lg">
+          <div className="container-lg fade-in-up">
             <div className="p-4">
               <p className="mb-0">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                sunt in culpa qui officia deserunt mollit anim id est laborum.
+                Welcome to Wawa Mart, your friendly neighborhood convenience
+                store where quality meets convenience. Since opening our doors,
+                we’ve been committed to providing a wide range of everyday
+                essentials—from snacks and beverages to household items and
+                on-the-go meals—all in one easy, accessible place. At Wawa Mart,
+                we pride ourselves on creating a clean, welcoming environment
+                where customer service comes first. Whether you’re grabbing a
+                quick Drink, stocking up on groceries, or just stopping by for a
+                friendly chat, our team is here to make your experience smooth
+                and satisfying. We’re more than just a store—we’re part of your
+                community. Thank you for choosing Wawa Mart!
               </p>
             </div>
           </div>
 
           {/* Sale Image */}
-          <div className="container-lg pb-5">
+          <div className="container-lg pb-5 fade-in-up">
             {/* Additional Image After Description */}
             <div className="text-center mt-4">
               <img
@@ -67,10 +71,10 @@ function App() {
           </div>
 
           {/* Contact Us Section */}
-          <div className="container-lg pb-5">
+          <div className="container-lg pb-5 animate-fade-in">
             <h2 className="mb-4 text-center">Contact Us</h2>
             <form
-              className="bg-white shadow rounded p-4 mx-auto"
+              className="bg-white shadow rounded p-4 mx-auto animate-form"
               style={{ maxWidth: "500px" }}
             >
               <div className="mb-3">
@@ -105,6 +109,17 @@ function App() {
                   id="email"
                   placeholder="Enter your email"
                 />
+              </div>
+              <div className="mb-3">
+                <label htmlFor="product" className="form-label">
+                  Product Suggestion
+                </label>
+                <textarea
+                  className="form-control"
+                  id="product"
+                  rows="3"
+                  placeholder="Write your product request or comment here"
+                ></textarea>
               </div>
               <button type="submit" className="btn btn-primary w-100">
                 Submit
